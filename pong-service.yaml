@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-09-22T20:54:33Z"
+  labels:
+    kustomize.toolkit.fluxcd.io/name: pong
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
+  name: pong-server-service
+  namespace: pong-namespace
+  resourceVersion: "297771"
+  uid: 1908c42d-3a47-4479-8cdf-24cdb5c02ef0
+spec:
+  clusterIP: 10.245.69.184
+  clusterIPs:
+  - 10.245.69.184
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30080
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: pong-server
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
