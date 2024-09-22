@@ -42,6 +42,7 @@ Cree los siguientes archivos de manifiesto en el directorio `manifests`:
 kind: Deployment
 metadata:
   name: pong-server-deployment
+  namespace: pong-namespace  
 spec:
   replicas: 1
   selector:
@@ -63,16 +64,17 @@ spec:
 
     ```yaml
     apiVersion: v1
-    kind: Service
-    metadata:
-      name: pong-server-service
-    spec:
-      selector:
-        app: pong-server
-      ports:
-        - protocol: TCP
-          port: 80
-          targetPort: 8080
+kind: Service
+metadata:
+  name: pong-server-service
+  namespace: pong-namespace 
+spec:
+  selector:
+    app: pong-server
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
     ```
 
 3. Agregue y confirme estos archivos en Git:
@@ -118,7 +120,7 @@ Para iniciar Flux y configurarlo para monitorear su repositorio de GitHub:
 2. Verificar el estado del cluster:
 
      ```bash
-    kubectl cluster-info --context kind-flux-cluster
+    kubectl cluster-info
      ```
 
 3. Ejecutar comprobaciones previas a la instalación:
@@ -170,7 +172,7 @@ Para cambiar el namespace de tu Pong deployment and service:
 
    ```bash
    metadata:
-        namespace: pong-namespace
+       namespace: pong-namespace
     ```
 
 3. Aplicar los cambios:
@@ -235,7 +237,7 @@ Para configurar Flux para implementar sus manifests:
 6. Verificar el despliegue:
 
     ```bash
-    kubectl port-forward svc/pong-server-service 8080:80
+    kubectl port-forward svc/pong-server-service 8080:80 -n pong-namespace
     curl http://localhost:8080/ping
     ```
 
