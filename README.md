@@ -6,7 +6,7 @@ Este repositorio contiene la configuración necesaria para implementar una aplic
 
 Antes de comenzar, asegúrese de tener lo siguiente instalado localmente:
 
-- A Kubernetes cluster (en este experimento, usamos Kind o también puede ser un proveedor de la nube como DigitalOcean)
+- Un Kubernetes cluster (en este experimento, usamos Kind o también puede ser un proveedor de la nube como DigitalOcean)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/)
 - [Flux CLI](https://fluxcd.io/flux/cmd/)
 - GitHub Personal Access Token con acceso al repositorio
