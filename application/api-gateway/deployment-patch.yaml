@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+  namespace: gatemaster
+spec:
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+        - name: api-gateway
+          resources:
+            requests:
+              memory: 300Mi
+              cpu: 300m
+            limits:
+              memory: 400Mi
+              cpu: 400m
+          image: umg100/api-gateway:tagname:4 # {"$imagepolicy": "flux-system:api-gateway"}
+          ports:
+            - containerPort: 8081
