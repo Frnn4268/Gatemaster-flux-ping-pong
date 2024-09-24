@@ -20,11 +20,11 @@ spec:
         - name: api-gateway
           resources:
             requests:
-              memory: 300Mi
-              cpu: 300m
+              memory: 100Mi
+              cpu: 100m
             limits:
-              memory: 400Mi
-              cpu: 400m
+              memory: 100Mi
+              cpu: 100m
           image: umg100/api-gateway:4
           imagePullPolicy: IfNotPresent
           ports:
