@@ -25,7 +25,7 @@ spec:
             limits:
               memory: 400Mi
               cpu: 400m
-          image: umg100/api-gateway:tagname:4
+          image: umg100/api-gateway:4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8081

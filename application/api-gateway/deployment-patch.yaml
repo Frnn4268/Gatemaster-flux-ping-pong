@@ -21,6 +21,6 @@ spec:
             limits:
               memory: 400Mi
               cpu: 400m
-          image: umg100/api-gateway:tagname:4 # {"$imagepolicy": "flux-system:api-gateway"}
+          image: umg100/api-gateway:4 # {"$imagepolicy": "flux-system:api-gateway"}
           ports:
             - containerPort: 8081
