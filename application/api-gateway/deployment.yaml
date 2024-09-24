@@ -30,9 +30,16 @@ spec:
           ports:
             - containerPort: 8081
           env: 
-            - PORT=8081
-            - REDIS_HOST=redis
-            - REDIS_PORT=6379
-            - AUTH_URL=auth-service.gatemaster.svc.cluster.local
-            - SERVICE_CRM_URL=crm.gatemaster.svc.cluster.local
-            - SERVICE_GATEMASTER_URL=gatemaster.gatemaster.svc.cluster.local
+            - name: PORT
+              value: "8081"
+            - name: REDIS_HOST
+              value: "redis"
+            - name: REDIS_PORT
+              value: "6379"
+            - name: AUTH_URL
+              value: "auth-service.gatemaster.svc.cluster.local"
+            - name: SERVICE_CRM_URL
+              value: "crm.gatemaster.svc.cluster.local"
+            - name: SERVICE_GATEMASTER_URL
+              value: "gatemaster.gatemaster.svc.cluster.local"
+
