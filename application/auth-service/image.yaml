@@ -1,0 +1,10 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: auth-service
+  namespace: flux-system
+spec:
+  image: umg100/auth-service
+  secretRef:
+    name: dockerhub-credentials
+  interval: 1m1s
