@@ -1,0 +1,10 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: gatemaster
+  namespace: flux-system
+spec:
+  image: umg100/gatemaster
+  secretRef:
+    name: dockerhub-credentials
+  interval: 1m1s
