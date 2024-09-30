@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gatemaster
+  name: gatemaster-app
   namespace: gatemaster
 spec:
   ports:
@@ -9,5 +9,5 @@ spec:
       protocol: TCP
       targetPort: 8091
   selector:
-    app: gatemaster
+    app: gatemaster-app
   type: ClusterIP
