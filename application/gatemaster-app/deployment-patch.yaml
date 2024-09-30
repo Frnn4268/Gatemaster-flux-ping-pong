@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gatemaster
+  name: gatemaster-app
   namespace: gatemaster
 spec:
   selector:
     matchLabels:
-      app: gatemaster
+      app: gatemaster-app
   template:
     metadata:
       labels:
-        app: gatemaster
+        app: gatemaster-app
     spec:
       containers:
-        - name: gatemaster
+        - name: gatemaster-app
           resources:
             requests:
               memory: 100Mi
