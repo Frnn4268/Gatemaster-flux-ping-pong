@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crm
+  namespace: gatemaster
+  labels:
+    app: crm
+spec:
+  selector:
+    matchLabels:
+      app: crm
+  replicas: 2
+  template:
+    metadata:
+      name: crm
+      labels:
+        app: crm
+    spec:
+      containers:
+        - name: crm
+          resources:
+            requests:
+              memory: 100Mi
+              cpu: 100m
+            limits:
+              memory: 100Mi
+              cpu: 100m
+          image: umg100/crm:1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8090
+          env: 
+            - name: PORT
+              value: "8090"
+            - name: REDIS_HOST
+              value: "redis"
+            - name: REDIS_PORT
+              value: "6379"
+            - name: AUTH_URL
+              value: "auth-service.gatemaster.svc.cluster.local"
+            - name: SERVICE_CRM_URL
+              value: "crm.gatemaster.svc.cluster.local"
+            - name: SERVICE_GATEMASTER_URL
+              value: "gatemaster.gatemaster.svc.cluster.local"
+

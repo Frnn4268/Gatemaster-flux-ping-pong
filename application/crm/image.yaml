@@ -1,0 +1,10 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: crm
+  namespace: flux-system
+spec:
+  image: umg100/crm
+  secretRef:
+    name: dockerhub-credentials
+  interval: 1m1s
