@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-service
+  namespace: gatemaster
+spec:
+  ports:
+    - port: 8083
+      protocol: TCP
+      targetPort: 8083
+  selector:
+    app: auth-service
+  type: ClusterIP

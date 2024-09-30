@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+  namespace: gatemaster
+  labels:
+    app: auth-service
+spec:
+  selector:
+    matchLabels:
+      app: auth-service
+  replicas: 2
+  template:
+    metadata:
+      name: auth-service
+      labels:
+        app: auth-service
+    spec:
+      containers:
+        - name: auth-service
+          resources:
+            requests:
+              memory: 100Mi
+              cpu: 100m
+            limits:
+              memory: 100Mi
+              cpu: 100m
+          image: umg100/auth-service:2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8083
+          env: 
+            - name: PORT
+              value: "8083"
+            - name: REDIS_HOST
+              value: "redis"
+            - name: REDIS_PORT
+              value: "6379"
+            - name: AUTH_URL
+              value: "auth-service.gatemaster.svc.cluster.local"
+            - name: SERVICE_CRM_URL
+              value: "crm.gatemaster.svc.cluster.local"
+            - name: SERVICE_GATEMASTER_URL
+              value: "gatemaster.gatemaster.svc.cluster.local"
+
