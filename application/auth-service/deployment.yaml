@@ -32,14 +32,11 @@ spec:
           env: 
             - name: PORT
               value: "8083"
-            - name: REDIS_HOST
-              value: "redis"
-            - name: REDIS_PORT
-              value: "6379"
-            - name: AUTH_URL
-              value: "auth-service.gatemaster.svc.cluster.local"
-            - name: SERVICE_CRM_URL
-              value: "crm.gatemaster.svc.cluster.local"
-            - name: SERVICE_GATEMASTER_URL
-              value: "gatemaster.gatemaster.svc.cluster.local"
-
+            - name: KEYCLOAK_AUTH_SERVER_URL
+              value: "http://keycloak:8080"
+            - name: KEYCLOAK_REALM
+              value: "master"
+            - name: KEYCLOAK_CLIENT_ID
+              value: "gatemaster"
+            - name: KEYCLOAK_CLIENT_SECRET
+              value: "ZzcHzavnyZ0C37dn903Ik6YHafML0K3A"
