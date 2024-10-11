@@ -21,6 +21,6 @@ spec:
             limits:
               memory: 100Mi
               cpu: 100m
-          image: umg100/api-gateway:5 # {"$imagepolicy": "flux-system:api-gateway"}
+          image: umg100/api-gateway:12 # {"$imagepolicy": "flux-system:api-gateway"}
           ports:
             - containerPort: 8081
