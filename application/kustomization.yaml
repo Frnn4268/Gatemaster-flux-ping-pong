@@ -5,4 +5,3 @@ resources:
   - auth-service
   - crm
   - gatemaster-app
-  #- redis
