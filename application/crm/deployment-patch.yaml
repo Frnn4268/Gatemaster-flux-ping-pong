@@ -21,6 +21,6 @@ spec:
             limits:
               memory: 100Mi
               cpu: 100m
-          image: umg100/crm:1 # {"$imagepolicy": "flux-system:crm"}
+          image: umg100/crm:3 # {"$imagepolicy": "flux-system:crm"}
           ports:
             - containerPort: 8090
