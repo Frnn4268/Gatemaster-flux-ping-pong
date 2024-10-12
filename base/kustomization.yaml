@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - dockerhub-secret
   - redis
-  - postgresql
+  #- postgresql
