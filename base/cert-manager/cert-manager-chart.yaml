@@ -20,4 +20,3 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: cert-manager-values
-      namespace: cert-manager
