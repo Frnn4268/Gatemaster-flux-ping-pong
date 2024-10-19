@@ -20,4 +20,4 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: cert-manager-values
-      namespace: flux-system
+      namespace: cert-manager
