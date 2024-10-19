@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: keycloak
 resources:
   - keycloak-namespace.yaml
+  - keycloak-chart.yaml
 configMapGenerator:
   - name: keycloak-values
     files:
