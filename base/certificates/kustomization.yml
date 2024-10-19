@@ -4,4 +4,4 @@ namespace: cert-manager
 resources:
   - godaddy-secret.yaml
   - letsencryptmasterissuer.yaml
-  - star-whoai-com.yaml
+  - star-gatemaster-online.yaml
