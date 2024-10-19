@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - cert-manager
   - godaddy-webhook
+  - certificates
   - dockerhub-secret
   - redis
   - postgresql
