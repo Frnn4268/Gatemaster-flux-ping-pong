@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: keycloak
 resources:
-  - namespace-keycloak.yaml
+  - keycloak-namespace.yaml
 configMapGenerator:
   - name: keycloak-values
     files:
