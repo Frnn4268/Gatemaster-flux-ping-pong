@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: godaddy-webhook
+spec:
+  releaseName: godaddy-webhook
+  chart:
+    spec:
+      #version: "1.27.0"
+      chart: godaddy-webhook
+      sourceRef:
+        kind: HelmRepository
+        name: godaddy-webhook
+        namespace: flux-system
+  interval: 1m0s
+  install:
+    remediation:
+      retries: 3
+  valuesFrom:
+    - kind: ConfigMap
+      name: godaddy-webhook-values
