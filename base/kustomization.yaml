@@ -4,3 +4,4 @@ resources:
   - dockerhub-secret
   - redis
   - postgresql
+  - pgadmin
