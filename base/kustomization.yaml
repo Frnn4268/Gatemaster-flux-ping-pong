@@ -6,6 +6,6 @@ resources:
   - certificates
   - ingress-nginx
   - dockerhub-secret
-  - redis
+  #- redis
   - postgresql
   - pgadmin
