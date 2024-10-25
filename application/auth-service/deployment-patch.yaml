@@ -21,6 +21,6 @@ spec:
             limits:
               memory: 100Mi
               cpu: 100m
-          image: umg100/auth-service:4 # {"$imagepolicy": "flux-system:auth-service"}
+          image: umg100/auth-service:5 # {"$imagepolicy": "flux-system:auth-service"}
           ports:
             - containerPort: 8083

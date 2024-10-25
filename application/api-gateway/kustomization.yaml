@@ -4,7 +4,7 @@ resources:
   - gatemaster-namespace.yaml
   - deployment.yaml
   - service.yaml
-  #- ingress.yaml
+  - ingress.yaml
   - image.yaml
   - image-policy.yaml
 patchesStrategicMerge:

@@ -21,6 +21,6 @@ spec:
             limits:
               memory: 100Mi
               cpu: 100m
-          image: umg100/gatemaster:3 # {"$imagepolicy": "flux-system:gatemaster"}
+          image: umg100/gatemaster:4 # {"$imagepolicy": "flux-system:gatemaster"}
           ports:
             - containerPort: 8091
