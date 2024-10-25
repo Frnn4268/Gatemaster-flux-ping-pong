@@ -8,8 +8,6 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/backend-protocol: "https"
-    nginx.ingress.kubernetes.io/proxy-buffer-size: "128k"
     #nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: letsencrypt
     #nginx.ingress.kubernetes.io/server-snippet: |
@@ -22,8 +20,8 @@ spec:
     - host: keycloak.gatemaster.online
       http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: /auth(/|$)(.*)
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: keycloak
