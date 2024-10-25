@@ -4,7 +4,7 @@ resources:
   - cert-manager
   - godaddy-webhook
   - certificates
-  - ingress-nginx
+  #- ingress-nginx
   - dockerhub-secret
   - redis
   - postgresql
