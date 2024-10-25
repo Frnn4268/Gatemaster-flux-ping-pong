@@ -5,4 +5,4 @@ resources:
   - auth-service
   - crm
   - gatemaster-app
-  #- keycloak
+  - keycloak
