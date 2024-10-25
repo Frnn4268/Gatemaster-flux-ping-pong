@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keycloak
+  namespace: keycloak
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    #nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: letsencrypt
+    #nginx.ingress.kubernetes.io/server-snippet: |
+    #     rewrite /dify https://innovation-lab.3pillarglobal.com/apps permanent; 
+
+
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: keycloak.gatemaster.online
+      http:
+        paths:
+          - path: /(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - keycloak.gatemaster.online
+      secretName: star-gatemaster-online
