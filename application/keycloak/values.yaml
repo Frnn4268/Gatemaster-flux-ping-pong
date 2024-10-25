@@ -806,7 +806,7 @@ adminIngress:
   extraTls:
     - hosts:
         - keycloak.gatemaster.online
-      secretName: star-gatemaster-com
+      secretName: star-gatemaster-online
   ## @param adminIngress.secrets If you're providing your own certificates, please use this to add the certificates as secrets
   ## key and certificate should start with -----BEGIN CERTIFICATE----- or
   ## -----BEGIN RSA PRIVATE KEY-----
