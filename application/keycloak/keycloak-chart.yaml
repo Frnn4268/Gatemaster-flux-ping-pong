@@ -6,7 +6,7 @@ spec:
   releaseName: keycloak
   chart:
     spec:
-      version: "17.3.0"
+      version: "24.0.2"
       chart: keycloak
       sourceRef:
         kind: HelmRepository
