@@ -746,7 +746,7 @@ adminIngress:
   controller: default
   ## @param adminIngress.hostname Default host for the admin ingress record (evaluated as template)
   ##
-  hostname: keycloak.gatemaster.online
+  hostname: https://keycloak.gatemaster.online
   ## @param adminIngress.path [string] Default path for the admin ingress record (evaluated as template)
   ##
   path: "{{ .Values.httpRelativePath }}"
