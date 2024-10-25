@@ -4,6 +4,7 @@ namespace: keycloak
 resources:
   - keycloak-namespace.yaml
   - keycloak-chart.yaml
+  - ingress.yaml
 configMapGenerator:
   - name: keycloak-values
     files:
