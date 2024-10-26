@@ -33,6 +33,6 @@ spec:
             - name: PORT
               value: "8090"
             - name: REDIS_HOST
-              value: "redis"
+              value: "redis-master.redis.svc.cluster.local"
             - name: REDIS_PORT
               value: "6379"

@@ -33,10 +33,10 @@ spec:
             - name: PORT
               value: "8083"
             - name: KEYCLOAK_AUTH_SERVER_URL
-              value: "http://keycloak:8080"
+              value: "keycloak.keycloak.svc.cluster.local"
             - name: KEYCLOAK_REALM
               value: "master"
             - name: KEYCLOAK_CLIENT_ID
               value: "gatemaster"
             - name: KEYCLOAK_CLIENT_SECRET
-              value: "ZzcHzavnyZ0C37dn903Ik6YHafML0K3A"
+              value: "CHoY7OAqJ4j4JTut3AkPsCQtcRQKvcbF"
