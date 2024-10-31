@@ -41,4 +41,4 @@ spec:
             - name: SERVICE_CRM_URL
               value: "http://crm.gatemaster.svc.cluster.local:8090"
             - name: SERVICE_GATEMASTER_URL
-              value: "http://gatemaster.gatemaster.svc.cluster.local:8091"
+              value: "http://gatemaster-app.gatemaster.svc.cluster.local:8091"
