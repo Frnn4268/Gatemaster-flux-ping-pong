@@ -33,7 +33,7 @@ spec:
             - name: PORT
               value: "8083"
             - name: KEYCLOAK_AUTH_SERVER_URL
-              value: "keycloak.keycloak.svc.cluster.local"
+              value: "http://keycloak.keycloak.svc.cluster.local"
             - name: KEYCLOAK_REALM
               value: "master"
             - name: KEYCLOAK_CLIENT_ID
