@@ -37,8 +37,8 @@ spec:
             - name: REDIS_PORT
               value: "6379"
             - name: AUTH_URL
-              value: "auth-service.gatemaster.svc.cluster.local"
+              value: "auth-service.gatemaster.svc.cluster.local:8083"
             - name: SERVICE_CRM_URL
-              value: "crm.gatemaster.svc.cluster.local"
+              value: "crm.gatemaster.svc.cluster.local:8090"
             - name: SERVICE_GATEMASTER_URL
-              value: "gatemaster.gatemaster.svc.cluster.local"
+              value: "gatemaster.gatemaster.svc.cluster.local:8091"
