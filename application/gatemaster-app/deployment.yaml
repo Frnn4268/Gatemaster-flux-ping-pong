@@ -36,3 +36,15 @@ spec:
               value: "redis-master.redis.svc.cluster.local"
             - name: REDIS_PORT
               value: "6379"
+            - name: POSTGRES_USER
+              value: "postgres"
+            - name: POSTGRES_HOST
+              value: "postgresql.postgresql.svc.cluster.local"
+            - name: POSTGRES_DB
+              value: "gatemaster"
+            - name: POSTGRES_PASSWORD
+              value: "1a7e52f0fcdd49078978051421df87cf"
+            - name: POSTGRES_PORT
+              value: "5432"
+            - name: KEYCLOAK_AUTH_SERVER_URL
+              value: "http://keycloak.keycloak.svc.cluster.local"
