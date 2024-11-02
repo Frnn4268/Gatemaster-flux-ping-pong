@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pgadmin
+  namespace: pgadmin
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    # nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    # nginx.ingress.kubernetes.io/use-regex: "true"
+    # nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_set_header X-Script-Name /pgadmin4;
+
+
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: pgadmin.gatemaster.online
+      http:
+        paths:
+          - path: /pgadmin4
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: pgadmin4
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - pgadmin.gatemaster.online
+      secretName: star-gatemaster-online

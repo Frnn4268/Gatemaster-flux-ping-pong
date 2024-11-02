@@ -4,6 +4,7 @@ namespace: pgadmin
 resources:
   - pgadmin-namespace.yaml
   - pgadmin-chart.yaml
+  - ingress.yaml
 configMapGenerator:
   - name: pgadmin-values
     files:
