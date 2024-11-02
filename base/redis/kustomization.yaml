@@ -4,6 +4,7 @@ namespace: redis
 resources:
   - redis-namespace.yaml
   - redis-chart.yaml
+  - service-nodeport.yaml
 configMapGenerator:
   - name: redis-values
     files:
