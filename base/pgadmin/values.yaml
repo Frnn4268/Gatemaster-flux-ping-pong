@@ -126,7 +126,7 @@ ingress:
           pathType: Prefix
   tls:
     - hosts:
-        - api-gateway.gatemaster.online
+        - pgadmin.gatemaster.online
       secretName: star-gatemaster-online
 
 
