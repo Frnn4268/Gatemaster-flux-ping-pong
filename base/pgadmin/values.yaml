@@ -124,15 +124,10 @@ ingress:
       paths:
         - path: /pgadmin4(/|$)(.*)
           pathType: Prefix
-          backend:
-              service:
-                name: pgadmin4
-                port:
-                  number: 80
-  tls:
-    - hosts:
-        - pgadmin.gatemaster.online
-      secretName: star-gatemaster-online
+  tls: 
+   - secretName: star-gatemaster-online
+     hosts:
+       - pgadmin.gatemaster.online
 
 
   
