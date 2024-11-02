@@ -107,7 +107,7 @@ networkPolicy:
 ## Ingress
 ## Ref: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
-  enabled: false
+  enabled: true
   annotations: 
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
@@ -120,14 +120,14 @@ ingress:
 
   ingressClassName: "nginx"
   hosts:
-    - host: xxx.xx.com
+    - host: pgadmin.gatemaster.online
       paths:
         - path: /pgadmin4(/|$)(.*)
           pathType: Prefix
   tls: 
-   - secretName: xxxx.xxx.com
+   - secretName: star-gatemaster-online
      hosts:
-       - xxxx.xxx.com
+       - pgadmin.gatemaster.online
 
 # Additional config maps to be mounted inside a container
 # Can be used to map config maps for sidecar as well
